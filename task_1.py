@@ -15,15 +15,14 @@ def total_salary(path: str) -> tuple:
     try:
         with open(path, mode="r", encoding='utf-8') as salary_data:
             salaries = []
-            lines = salary_data.readlines()
-
-            for line in lines:
+            # Reads file line by line
+            for line in salary_data:
                 # Removes all empty spaces and line breaks
                 line = line.replace(' ', '').replace('\n', '')
                 # Gets salary amount of each employee
                 _, salary = line.split(',', 1)
 
-                # Check is it possible to covert a string into the integer
+                # Check is it possible to covert a string into integer
                 if not salary.isdigit():
                     return (0, 0)
                 else:
