@@ -54,5 +54,5 @@ def total_salary(path: str) -> tuple:
         return (0, 0)
 
 # Usage:
-total, average = total_salary("goit-pycore-hw-04/salary_file.txt")
+total, average = total_salary("salary_file.txt")
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
